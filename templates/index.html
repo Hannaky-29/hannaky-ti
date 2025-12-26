@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hannaky TI | Soporte Técnico & Desarrollo Web - Bogotá</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Audio de fondo -->
+    <audio id="musica" autoplay loop>
+        <source src="{{ url_for('static', filename='audio/metal.mp3') }}" type="audio/mpeg">
+        Tu navegador no soporta audio.
+    </audio>
+
+    <!-- Header y Navegación -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Hannaky TI">
+                    <div class="logo-text">
+                        <h1>HANNAKY <span class="neon">TI</span></h1>
+                        <p>Tecnología con actitud</p>
+                    </div>
+                </div>
+                
+                <div class="nav-links">
+                    <a href="#inicio" class="nav-link active">INICIO</a>
+                    <a href="#servicios" class="nav-link">SERVICIOS</a>
+                    <a href="#web" class="nav-link">WEB</a>
+                    <a href="#nosotros" class="nav-link">NOSOTROS</a>
+                    <a href="#contacto" class="nav-link">CONTACTO</a>
+                </div>
+                
+                <div class="nav-contact">
+                    <a href="tel:+573054627779" class="phone-btn">
+                        <i class="fas fa-phone"></i>
+                        <span>305 462 7779</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sección Principal -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero" id="inicio">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h2 class="hero-title">
+                            TECNOLOGÍA QUE
+                            <span class="neon">ROMPE LOS LÍMITES</span>
+                        </h2>
+                        <p class="hero-subtitle">
+                            Soporte técnico y desarrollo web profesional en Bogotá
+                        </p>
+                        
+                        <div class="hero-features">
+                            <div class="feature">
+                                <i class="fas fa-bolt"></i>
+                                <h3>Rápido</h3>
+                                <p>Respuesta en minutos</p>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-shield-alt"></i>
+                                <h3>Garantizado</h3>
+                                <p>90 días de garantía</p>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-headset"></i>
+                                <h3>24/7</h3>
+                                <p>Soporte continuo</p>
+                            </div>
+                        </div>
+                        
+                        <div class="hero-buttons">
+                            <a href="tel:+573054627779" class="btn btn-primary">
+                                <i class="fas fa-phone"></i> LLAMAR AHORA
+                            </a>
+                            <a href="https://wa.me/573054627779" class="btn btn-whatsapp">
+                                <i class="fab fa-whatsapp"></i> WHATSAPP
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-image">
+                        <img src="{{ url_for('static', filename='img/gato.png') }}" alt="Tecnología Hannaky TI" class="cat-image">
+                        <div class="image-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Servicios Técnicos -->
+        <section class="services" id="servicios">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">SERVICIOS <span class="neon">TÉCNICOS</span></h2>
+                    <p class="section-subtitle">Soluciones completas para tus equipos</p>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <h3>FORMATEO E INSTALACIÓN</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Windows/MacOS/Linux</li>
+                            <li><i class="fas fa-check"></i> Recuperación de datos</li>
+                            <li><i class="fas fa-check"></i> Drivers actualizados</li>
+                            <li><i class="fas fa-check"></i> Software esencial</li>
+                        </ul>
+                        <button class="service-btn" onclick="window.open('https://wa.me/573054627779?text=Quiero%20formatear%20mi%20computador', '_blank')">
+                            <i class="fas fa-bolt"></i> COTIZAR
+                        </button>
+                    </div>
+                    
+                    <div class="service-card highlight">
+                        <div class="service-icon">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <h3>OPTIMIZACIÓN</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Limpieza de virus</li>
+                            <li><i class="fas fa-check"></i> Aceleración sistema</li>
+                            <li><i class="fas fa-check"></i> Configuración avanzada</li>
+                            <li><i class="fas fa-check"></i> Mantenimiento</li>
+                        </ul>
+                        <button class="service-btn" onclick="window.open('https://wa.me/573054627779?text=Quiero%20optimizar%20mi%20computador', '_blank')">
+                            <i class="fas fa-bolt"></i> COTIZAR
+                        </button>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-wrench"></i>
+                        </div>
+                        <h3>REPARACIÓN HARDWARE</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Cambio de pantallas</li>
+                            <li><i class="fas fa-check"></i> Reparación placas</li>
+                            <li><i class="fas fa-check"></i> Soldadura SMD</li>
+                            <li><i class="fas fa-check"></i> Mantenimiento</li>
+                        </ul>
+                        <button class="service-btn" onclick="window.open('https://wa.me/573054627779?text=Necesito%20reparar%20hardware', '_blank')">
+                            <i class="fas fa-bolt"></i> COTIZAR
+                        </button>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3>REDES Y CONECTIVIDAD</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Cableado estructurado</li>
+                            <li><i class="fas fa-check"></i> WiFi empresarial</li>
+                            <li><i class="fas fa-check"></i> Configuración routers</li>
+                            <li><i class="fas fa-check"></i> Seguridad de red</li>
+                        </ul>
+                        <button class="service-btn" onclick="window.open('https://wa.me/573054627779?text=Necesito%20instalación%20de%20redes', '_blank')">
+                            <i class="fas fa-bolt"></i> COTIZAR
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Desarrollo Web -->
+        <section class="web-section" id="web">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">DESARROLLO <span class="neon">WEB</span></h2>
+                    <p class="section-subtitle">Tu presencia digital profesional</p>
+                </div>
+                
+                <div class="web-content">
+                    <div class="web-info">
+                        <div class="web-card">
+                            <div class="web-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            <div class="web-text">
+                                <h3>TIENDAS ONLINE</h3>
+                                <p>E-commerce completo con pasarelas de pago y panel administrativo.</p>
+                                <span class="web-price">Desde $500.000</span>
+                            </div>
+                        </div>
+                        
+                        <div class="web-card highlight">
+                            <div class="web-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div class="web-text">
+                                <h3>WEBS CORPORATIVAS</h3>
+                                <p>Diseño profesional responsive para empresas de todos los tamaños.</p>
+                                <span class="web-price">Desde $300.000</span>
+                            </div>
+                        </div>
+                        
+                        <div class="web-card">
+                            <div class="web-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="web-text">
+                                <h3>LANDING PAGES</h3>
+                                <p>Páginas optimizadas para conversiones rápidas y efectivas.</p>
+                                <span class="web-price">Desde $150.000</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="web-tech">
+                        <h3>TECNOLOGÍAS</h3>
+                        <div class="tech-grid">
+                            <div class="tech">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML5</span>
+                            </div>
+                            <div class="tech">
+                                <i class="fab fa-css3-alt"></i>
+                                <span>CSS3</span>
+                            </div>
+                            <div class="tech">
+                                <i class="fab fa-js"></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="tech">
+                                <i class="fab fa-python"></i>
+                                <span>Python</span>
+                            </div>
+                            <div class="tech">
+                                <i class="fas fa-database"></i>
+                                <span>MySQL</span>
+                            </div>
+                            <div class="tech">
+                                <i class="fab fa-wordpress"></i>
+                                <span>WordPress</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nosotros -->
+        <section class="about" id="nosotros">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">QUIÉNES <span class="neon">SOMOS</span></h2>
+                    <p class="section-subtitle">Pasión por la tecnología desde Bogotá</p>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Hannaky TI" class="about-logo">
+                    </div>
+                    
+                    <div class="about-text">
+                        <div class="about-card">
+                            <i class="fas fa-bullseye"></i>
+                            <div>
+                                <h3>NUESTRA MISIÓN</h3>
+                                <p>Proveer soluciones tecnológicas innovadoras con excelencia y rapidez.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="about-card">
+                            <i class="fas fa-eye"></i>
+                            <div>
+                                <h3>NUESTRA VISIÓN</h3>
+                                <p>Ser líderes en servicios tecnológicos en Bogotá y Colombia.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="about-card">
+                            <i class="fas fa-heart"></i>
+                            <div>
+                                <h3>NUESTRA FILOSOFÍA</h3>
+                                <p>Tecnología con alma, pasión en cada servicio.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">+5</div>
+                                <div class="stat-label">Años de experiencia</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">+500</div>
+                                <div class="stat-label">Equipos reparados</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">100%</div>
+                                <div class="stat-label">Clientes satisfechos</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section class="contact" id="contacto">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">CONTACTO <span class="neon">DIRECTO</span></h2>
+                    <p class="section-subtitle">Estamos aquí para ayudarte</p>
+                </div>
+                
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h3>UBICACIÓN</h3>
+                                <p>Bogotá, Colombia</p>
+                                <p class="small">Servicio a domicilio en toda la ciudad</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h3>TELÉFONO</h3>
+                                <p class="phone-number">305 462 7779</p>
+                                <a href="tel:+573054627779" class="contact-btn">
+                                    <i class="fas fa-phone"></i> LLAMAR AHORA
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h3>HORARIOS</h3>
+                                <p>Lun - Vie: 8AM - 8PM</p>
+                                <p>Sábados: 9AM - 6PM</p>
+                                <p class="emergency">Emergencias: 24/7</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-action">
+                        <h3>SOLICITA TU COTIZACIÓN</h3>
+                        <p>Diagnóstico GRATIS en el primer contacto</p>
+                        
+                        <div class="action-buttons">
+                            <a href="tel:+573054627779" class="action-btn call">
+                                <i class="fas fa-phone"></i> LLAMADA DIRECTA
+                            </a>
+                            <a href="https://wa.me/573054627779" class="action-btn whatsapp">
+                                <i class="fab fa-whatsapp"></i> WHATSAPP
+                            </a>
+                        </div>
+                        
+                        <div class="social">
+                            <p>SÍGUENOS:</p>
+                            <div class="social-icons">
+                                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Hannaky TI">
+                    <h3>HANNAKY <span class="neon">TI</span></h3>
+                    <p>Tecnología con actitud rockera</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>ENLACES</h4>
+                    <a href="#servicios">Servicios</a>
+                    <a href="#web">Desarrollo Web</a>
+                    <a href="#nosotros">Nosotros</a>
+                    <a href="#contacto">Contacto</a>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>CONTACTO</h4>
+                    <a href="tel:+573054627779"><i class="fas fa-phone"></i> 305 462 7779</a>
+                    <a href="https://wa.me/573054627779"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Hannaky TI. Todos los derechos reservados.</p>
+                <p class="rock-quote">"Tecnología que suena fuerte"</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Controles de Música -->
+    <div class="music-controls">
+        <button id="musicToggle" class="music-btn">
+            <i class="fas fa-volume-up"></i>
+        </button>
+        <div class="volume-control">
+            <input type="range" id="volumeSlider" min="0" max="100" value="70">
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const audio = document.getElementById('musica');
+            const musicToggle = document.getElementById('musicToggle');
+            const volumeSlider = document.getElementById('volumeSlider');
+            
+            // Configuración inicial
+            audio.volume = 0.7;
+            audio.muted = false;
+            
+            // Auto-reproducir
+            setTimeout(() => {
+                audio.play().catch(() => {
+                    musicToggle.innerHTML = '<i class="fas fa-play"></i>';
+                    musicToggle.setAttribute('data-paused', 'true');
+                });
+            }, 1000);
+            
+            // Toggle música (play/pause/mute)
+            musicToggle.addEventListener('click', () => {
+                if (audio.paused) {
+                    // Si está pausado, reproducir
+                    audio.play();
+                    audio.muted = false;
+                    musicToggle.innerHTML = '<i class="fas fa-volume-up"></i>';
+                    musicToggle.setAttribute('data-paused', 'false');
+                    musicToggle.setAttribute('data-muted', 'false');
+                } else if (audio.muted) {
+                    // Si está muteado, desmutear
+                    audio.muted = false;
+                    musicToggle.innerHTML = '<i class="fas fa-volume-up"></i>';
+                    musicToggle.setAttribute('data-muted', 'false');
+                } else {
+                    // Si está sonando, mutear
+                    audio.muted = true;
+                    musicToggle.innerHTML = '<i class="fas fa-volume-mute"></i>';
+                    musicToggle.setAttribute('data-muted', 'true');
+                }
+            });
+            
+            // Control de volumen
+            volumeSlider.addEventListener('input', (e) => {
+                const volume = e.target.value / 100;
+                audio.volume = volume;
+                audio.muted = false;
+                
+                // Actualizar icono según volumen
+                if (volume === 0) {
+                    musicToggle.innerHTML = '<i class="fas fa-volume-mute"></i>';
+                    musicToggle.setAttribute('data-muted', 'true');
+                } else if (volume < 0.5) {
+                    musicToggle.innerHTML = '<i class="fas fa-volume-down"></i>';
+                    musicToggle.setAttribute('data-muted', 'false');
+                } else {
+                    musicToggle.innerHTML = '<i class="fas fa-volume-up"></i>';
+                    musicToggle.setAttribute('data-muted', 'false');
+                }
+            });
+            
+            // Smooth scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Actualizar navegación
+                        document.querySelectorAll('.nav-link').forEach(link => {
+                            link.classList.remove('active');
+                        });
+                        this.classList.add('active');
+                    }
+                });
+            });
+            
+            // Efecto hover en tarjetas
+            document.querySelectorAll('.service-card, .web-card, .about-card').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+            
+            // Inicializar slider
+            volumeSlider.value = 70;
+        });
+        
+        // Click global para reproducir si está pausado por autoplay bloqueado
+        document.addEventListener('click', () => {
+            const audio = document.getElementById('musica');
+            const musicToggle = document.getElementById('musicToggle');
+            
+            if (audio.paused && musicToggle.getAttribute('data-paused') === 'true') {
+                audio.play();
+                audio.muted = false;
+                musicToggle.innerHTML = '<i class="fas fa-volume-up"></i>';
+                musicToggle.setAttribute('data-paused', 'false');
+                musicToggle.setAttribute('data-muted', 'false');
+            }
+        });
+    </script>
+</body>
+</html>

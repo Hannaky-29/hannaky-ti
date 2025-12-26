@@ -1,0 +1,15 @@
+Hannaky TIi/
+├── app.py
+├── requirements.txt
+├── README.md
+├── .gitignore
+├── templates/
+│   └── index.html
+└── static/
+    ├── style.css
+    ├── audio/
+    │   └── metal.mp3
+    └── img/
+        ├── logo.png
+        ├── gato.png
+        └── fondo.png
